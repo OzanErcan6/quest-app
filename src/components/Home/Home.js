@@ -31,7 +31,7 @@ export default function Home(){
         return(
             <Container sx={{ display: 'flex', flexWrap:'wrap', justifyContent:'center', gap: '10vh', alignItems:'center', backgroundColor:'#cfe8fc', height:'100vh' }} >
                 {postList.map(post => (
-                    <Post title={post.title} text={post.text}/>
+                    <Post userId={post.userId} userName={post.userName} title={post.title} text={post.text}/>
                 ))}
             </Container>
         )
