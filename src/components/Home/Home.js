@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Post from "../Post/Post";
 import "./Home.css"
+import Container from '@mui/material/Container';
 
 export default function Home(){
 
@@ -28,12 +29,11 @@ export default function Home(){
     }
     else{
         return(
-            <div className="container">
-                Home
+            <Container sx={{ display: 'flex', flexWrap:'wrap', justifyContent:'center', gap: '10vh', alignItems:'center', backgroundColor:'#cfe8fc', height:'100vh' }} >
                 {postList.map(post => (
                     <Post title={post.title} text={post.text}/>
                 ))}
-            </div>
+            </Container>
         )
     }
 }
