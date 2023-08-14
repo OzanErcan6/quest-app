@@ -44,7 +44,7 @@ function Post(props) {
 
     return (
         <div className="postContainer">
-            <Card sx={{ width: 800 }}>
+            <Card sx={{ width: 800 , margin:10 }}>
                 <CardHeader
                     avatar={
                         <Link style={{ textDecoration: 'none', boxShadow: 'none', color: 'white' }} to={{ pathname: '/users/' + userId }}>
@@ -53,7 +53,6 @@ function Post(props) {
                             </Avatar>
                         </Link>
                     }
-
                     title={title}
                 />
 
