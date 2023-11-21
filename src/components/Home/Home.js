@@ -24,7 +24,7 @@ export default function Home(){
 
     useEffect(() => {
         getPosts()
-    }, [])
+    }, [postList])
 
     if(error){
         return <div>Error !!</div>
@@ -38,7 +38,7 @@ export default function Home(){
                 <PostForm userId={1} userName={"Ozan"} getPosts = {getPosts}/>
 
                 {postList.map(post =>
-                    (<Post userId={post.userId} userName={post.userName} title={post.title} text={post.text}/>
+                    (<Post postId = {post.id} userId={post.userId} userName={post.userName} title={post.title} text={post.text}/>
                 ))}
             </div>
         )
